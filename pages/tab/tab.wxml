@@ -1,0 +1,9 @@
+<!--pages/tab/tab.wxml-->
+<view class="tab">
+  <view class="title">
+    <text class="tit {{index==num?'active':''}}" wx:for="{{titles}}" wx:key="index" bindtap="tab" data-index="{{index}}">{{item}}</text>
+  </view>
+  <block wx:for="{{contents}}" wx:for-item="list" wx:for-index="i" wx:key="i" wx:if="{{i==num}}" >
+    <text class="lis {{index==arr[num]?'active':''}}" wx:for="{{list}}" wx:key="index" bindtap="replace" data-txt="{{item}}" data-index="{{index}}">{{item}}</text>
+  </block>
+</view>

@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/detail/detail",
+    "pages/main/main",
+    "pages/handle/handle",
+    "pages/tab/tab",
+    "pages/discuss/discuss"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ED7CAF",
+    "navigationBarTitleText": "猫眼商城",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#ED7CAF",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "iconPath": "./img/hande.png",
+        "pagePath": "pages/index/index",
+        "selectedIconPath": "./img/hande_h.png",
+        "text": "推荐"
+      },
+      {
+        "iconPath": "./img/new.png",
+        "pagePath": "pages/handle/handle",
+        "selectedIconPath": "./img/new_n.png",
+        "text": "新品"
+      },
+      {
+        "iconPath": "./img/main.png",
+        "pagePath": "pages/main/main",
+        "selectedIconPath": "./img/main_m.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

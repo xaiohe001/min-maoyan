@@ -1,0 +1,71 @@
+.navs{
+  width: 100%;
+  height: 100vh;
+  background-color: #F4F4F4;
+}
+.page-body{
+  padding: 30rpx 0 30rpx 0;
+  margin: 0 30rpx;
+  background-color: #f4f4f4;
+}
+.weui-input{
+  height: 70rpx;
+  padding-left: 60rpx;
+  box-sizing: border-box;
+  border-radius: 100rpx;
+  background-color: #fff;
+}
+.weui-cell .weui-cell_input{
+  position: relative;
+}
+.weui-cell>image{
+  width: 35rpx;
+  height: 35rpx;
+  position: absolute;
+  top: 50rpx;
+  left: 50rpx;
+}
+.swiper{
+  height: 200rpx;
+}
+.swiper-item{
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  width: 690rpx;
+  height: 200rpx !important;
+}
+.swiper-item>image{
+  width: 690rpx;
+  /* height: 200rpx; */
+  height: 100%;
+  border-radius: 20rpx;
+}
+.picture{
+  padding: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.picture image{
+  width: 330rpx;
+  height: 120rpx;
+  border-radius: 20rpx;
+}
+.classic{
+  font-size: 28rpx;
+  color: #402c2e;
+  position: absolute;
+  left: 414rpx;
+  top: 55rpx;
+}
+.hotattack{
+  font-size: 24rpx;
+  color: #402c2e;
+  position: absolute;
+  left: 420rpx;
+  top: 100rpx;
+}
+.container{
+  background: #fe6906;
+  color: #ffffff;
+}

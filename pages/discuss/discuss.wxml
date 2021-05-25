@@ -1,0 +1,8 @@
+<!--pages/discuss/discuss.wxml-->
+<view class="discuss">
+  <view class="top">
+    <input type="text" bindinput="getValue" value="{{value}}"/>
+    <text class="btn" bindtap="add">piupiupiu</text>
+  </view>
+  <list lists="{{lists}}" bindsend="getList"></list>
+</view>

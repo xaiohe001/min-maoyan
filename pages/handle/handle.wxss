@@ -1,0 +1,72 @@
+.navs{
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  color: #333;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 2rpx solid #F7F7F8;
+}
+.navss{
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  color: #333;
+  display: flex;
+  justify-content: space-around;
+}
+.lists{
+  /* width: 100%; */
+  background-color: #F4F4F4;
+}
+.list{
+ display: flex;
+  flex-wrap: wrap;
+}
+.list-lis{
+  width: 330rpx;
+  height: 500rpx;
+  margin: 23rpx;
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+.lis{
+  flex: 1;
+  width: 330rpx;
+  height: 500rpx;
+  /* margin: 20rpx; */
+  background-color: #fff;
+  border-radius: 20rpx;
+
+}
+.lis image{
+  width: 330rpx;
+  height: 330rpx;
+  border-radius: 20rpx;
+  /* margin-left: -22rpx; */
+
+}
+.list text{
+  padding: 0 0 0 20rpx;
+}
+.title{
+  width: 300rpx;
+  height: 70rpx;
+  font-size: 26rpx;
+  display: block;
+}
+.money , .line{
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.money{
+  font-size: 30rpx;
+  color: #ed3934;
+}
+.line{
+  font-size: 24rpx;
+  color: #aaaaaa;
+  text-decoration: line-through;
+}

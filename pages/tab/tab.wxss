@@ -1,0 +1,16 @@
+/* pages/tab/tab.wxss */
+.tit{
+  display:inline-block;
+  margin-right: 25rpx;
+  margin-left: 35rpx;
+  font-size: 40rpx;
+}
+.lis{
+  display: block;
+  text-align: center;
+  height: 60rpx;
+  margin-top: 30rpx;
+}
+.active{
+  color: #ED7CAF;
+}

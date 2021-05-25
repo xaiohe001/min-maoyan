@@ -1,0 +1,17 @@
+/* pages/componets/disList/disList.wxss */
+.lists image {
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 50%;
+  position: relative;
+  top: 10rpx;
+}
+.lists{
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 40rpx;
+}
+.txt{
+  line-height: 60rpx;
+}

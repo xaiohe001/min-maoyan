@@ -1,0 +1,26 @@
+/* pages/discuss/discuss.wxss */
+.top {
+  overflow: hidden;
+  padding: 20rpx;
+}
+input {
+  float: left;
+  width: 70%;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-right: 20rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  border: 2rpx solid pink;
+}
+.btn {
+  display: block;
+  float: left;
+  width: 150rpx;
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: violet;
+  color: #fff;
+  border-radius: 8rpx;
+}

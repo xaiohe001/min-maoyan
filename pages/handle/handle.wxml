@@ -1,0 +1,20 @@
+<!--pages/handle/handle.wxml-->
+<!-- <view class="score">
+  <text wx:if="{{score<60}}">滚回家吧</text>
+  <text wx:elif="{{score>=60&&score<75}}">有待观察</text>
+  <text wx:elif="{{score>=75&&score<90}}">还阔以吧</text>
+  <text wx:else="{{score>=90}}">表现不错哦</text>
+</view> -->
+
+<view class="lists">
+  <ul class="list">
+  <navigator class="list-lis" wx:for="{{lists}}" wx:key="index" open-type="navigate" url="{{'../detail/detail?id='+item.dealid}}">
+      <li class="lis">
+        <image src="{{item.pic}}"></image>
+        <text class="title">{{item.title}}</text>
+        <text class="money">¥{{item.price}}</text>
+        <text class="line">¥{{item.value}}</text>
+      </li>
+    </navigator>
+  </ul>
+</view>

@@ -1,0 +1,3 @@
+<!--componets/a/a.wxml-->
+<!-- 子向父传值 -->
+<text bindtap="send">piupiu</text>

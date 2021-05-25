@@ -1,0 +1,11 @@
+<!--pages/componets/disList/disList.wxml-->
+<view class="lists">
+  <block wx:if="{{lists.length>0}}">
+    <view wx:for="{{lists}}" wx:key="index" class="txt">
+      <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.zhimg.com%2F50%2Fv2-e73ebe5fb7fbae39d69ed94dcc82f145_hd.jpg&refer=http%3A%2F%2Fpic1.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1622201427&t=b0e533b7941305816ea0134d23787661"></image>
+      {{item}}
+      <text bindtap="delete" data-id="{{index}}">删除</text>
+    </view>
+  </block>
+  <text wx:else>暂无内容</text>
+</view>

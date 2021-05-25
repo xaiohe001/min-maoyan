@@ -1,0 +1,31 @@
+<!--pages/componets/componets.wxml-->
+<view class="demo">测试文件,来啊 12 121  12 121 </view>
+<!-- 父向子传值
+        1 在父组件的json文件引入子组件
+          {
+            "usingComponents": {
+            "自定义组件标签": "子组件路径"
+          }
+        2 在父组件的wxml文件插入子组件标签
+          <自定义组件标签  自定义属性名='我是父组件传入子组件的值'></自定义组件标签>
+        3 在子组件的json文件设置true 允许传参
+          {
+            "component": true,
+            "usingComponents": {} 
+          }
+        4 在子组件的js文件设置参数类型
+          Component({
+                  properties: {//接收父组件传过来的值
+                    自定义属性名:{
+                      type:参数类型 String  Number  Array  Object...,
+                      value: 设置默认值
+                    }
+                }
+              }) 
+        5 在子组件使用父组件传入的值
+          <view>
+            父组件的内容为:{{自定义属性名}}
+          </view>
+}
+-->
+<view>{{myFun}}</view> 

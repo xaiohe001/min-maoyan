@@ -1,0 +1,32 @@
+/* pages/detail/detail.wxss */
+.swiper-item{
+  width: 100%;
+  height: 750rpx;
+}
+.swiper-item image{
+  width: 100%;
+  height: 750rpx;
+}
+.page-body{
+  height: 750rpx;
+}
+.swiper{
+  height: 750rpx;
+}
+.page-section{
+  height: 750rpx;
+}
+.price{
+  width: 100%;
+  height: 234rpx;
+  background: chartreuse;
+  padding: 20rpx 30rpx 20rpx 30rpx;
+  box-sizing: border-box;
+}
+.current-price{
+  color: #ED3934;
+  font-size:60rpx;
+}
+.original-price{
+  font-size: 26rpx;
+}
