@@ -35,7 +35,8 @@
     <view class="limited">
       <view class="limited-top">
         <view class='container'>
-            <text>剩余时间：{{countdown}}</text>
+          <text>爆款限时秒杀</text>
+          <text>{{countdown}}</text>
         </view>
       </view>
       <view class="limited-top"></view>

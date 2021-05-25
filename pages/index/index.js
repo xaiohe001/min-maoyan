@@ -65,22 +65,19 @@ Page({
     var endDate = new Date(that.data.endDates); // 设置截止时间
     var end = endDate.getTime();
     var lastTime = end - now; // 时间差
-    console.log(lastTime);
-    var d, h, m, s , ms;
+    var d, h, m, s;
     if (lastTime >= 0){
       d = Math.floor(lastTime / 1000 / 60 / 60 / 24);
       h = Math.floor(lastTime / 1000 / 60 / 60 % 24);
       m = Math.floor(lastTime / 1000 / 60 % 60);
       s = Math.floor(lastTime / 1000 % 60);
-      ms = Math.floor(lastTime % 1000);
-      ms = ms < 100 ? "0" + ms : ms
       s = s < 10 ? "0" + s : s
       m = m < 10 ? "0" + m : m
       h = h < 10 ? "0" + h : h
       that.setData({
         countdown: d + ":" + h + ":" + m +":"+s,
       })
-      setInterval(that.countTime, 100);
+      setTimeout(that.getTimes, 100);
     }else{
       console.log('已截止');
       that.setData({
