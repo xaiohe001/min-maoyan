@@ -33,12 +33,37 @@
     </view>
     <!-- 限时秒杀 -->
     <view class="limited">
-      <view class="limited-top">
         <view class='container'>
           <text>爆款限时秒杀</text>
           <text>{{countdown}}</text>
         </view>
+      <view class="limited-top">
+        <navigator wx:for="{{list}}" wx:key="index" open-type="navigate" url="{{'../detail/detail?id='+item.dealId}}">
+          <view class="bluetooth">
+            <image src="{{item.dealPhoto}}"></image>
+            <view class="txt">{{item.dealName}}</view>
+            <view class="price">
+              ¥{{item.seckillingPrice}}<text> ¥{{item.price}}</text>
+            </view>
+          </view>
+        </navigator>
       </view>
-      <view class="limited-top"></view>
+    </view>
+    <view class="unicorn">
+      <view class="unicorn-top">
+          <text>独角兽盲盒</text>
+          <text>更多 > </text>
+      </view>
+      <view class="limited-top">
+        <navigator wx:for="{{list}}" wx:key="index" open-type="navigate" url="{{'../detail/detail?id='+item.dealId}}">
+          <view class="bluetooth">
+            <image src="{{item.dealPhoto}}"></image>
+            <view class="txt">{{item.dealName}}</view>
+            <view class="price">
+              ¥{{item.seckillingPrice}}<text> ¥{{item.price}}</text>
+            </view>
+          </view>
+        </navigator>
+      </view>
     </view>
 </view>

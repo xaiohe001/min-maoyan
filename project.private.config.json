@@ -53,6 +53,11 @@
           "pathName": "pages/discuss/discuss",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/main/main",
+          "pathName": "pages/main/main",
+          "scene": null
         }
       ]
     }

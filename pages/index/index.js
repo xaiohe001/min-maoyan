@@ -8,7 +8,8 @@ Page({
     focus:false,
     inputValue:'',
     countdown:'',
-    endDates: "2021-11-11 11:11"
+    endDates: "2021-12-11 11:11",
+    list:[]
   },
 
   /**
@@ -18,6 +19,7 @@ Page({
     // console.log(this);
     this.getData()
     this.getTimes()
+    this.getLimitedTime()
   },
 
   jump(){
@@ -47,7 +49,6 @@ Page({
       url: 'https://store.maoyan.com/mmall/api/ads/api/position/detail?ci=1&clientType=touch&channelId=4&version_name=&uuid=35F24FF0BD2E11EB82902BD766CD5BC76B9A9123EF264B948811331AE657F34A&positionIds=1132&os=ios',
       method:"GET",
       success:function(res){
-        console.log(res.data.data[0].config);
         that.setData({
           lists:[...res.data.data[0].config]
         })
@@ -84,7 +85,23 @@ Page({
         countdown: '00:00:00'
       })
     }
-    
+  },
+  getLimitedTime(){
+    var that = this
+    wx.request({
+      url: 'https://store.maoyan.com/mmall/api/mall/mallpro/v3/seckilling/list.json',
+      method:"GET",
+      success:function(res){
+        console.log(res.data.data.dealList);
+        that.setData({
+          list:[...res.data.data.dealList]
+        })
+      },
+      fail:function (err) {
+        console.log(err);
+        
+      }
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

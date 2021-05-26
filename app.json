@@ -11,7 +11,7 @@
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#ED7CAF",
-    "navigationBarTitleText": "猫眼商城",
+    "navigationBarTitleText": "猫眼",
     "navigationBarTextStyle": "white",
     "enablePullDownRefresh": true
   },

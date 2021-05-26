@@ -18,7 +18,7 @@ Page({
     //   title:options.id
     // })
     var that = this
-    console.log(options.id);
+    console.log(options);
     wx.request({
       url: 'https://store.maoyan.com/mmall/api/mall/goods/queryDealById.json?channelId=4&version_name=&uuid=BCAB56A0848E11EBADB85BD92CD5F4F819F6CE90AED24F46A32650943282C66C&dealId='+options.id,
       method: "GET",
