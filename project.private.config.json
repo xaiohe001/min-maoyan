@@ -15,7 +15,7 @@
         {
           "name": "pages/detail/detail",
           "pathName": "pages/detail/detail",
-          "query": "id=100408189",
+          "query": "id=100413269",
           "scene": null
         },
         {
@@ -57,6 +57,13 @@
         {
           "name": "pages/main/main",
           "pathName": "pages/main/main",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/scroll/scroll",
+          "pathName": "pages/scroll/scroll",
+          "query": "id=100413269",
           "scene": null
         }
       ]

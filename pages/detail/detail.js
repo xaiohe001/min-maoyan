@@ -6,7 +6,12 @@ Page({
    */
   data: {
     title:null,
-    msg:[]
+    msg:[],
+    activeIndex:0,
+    num:0,
+    productDetails:['商品详情','购买须知','相关推荐'],
+    winHeight: '100%',
+    toView: 'productBox',//锚点跳转的ID
   },
 
   /**
@@ -18,7 +23,7 @@ Page({
     //   title:options.id
     // })
     var that = this
-    console.log(options);
+    // console.log(options);
     wx.request({
       url: 'https://store.maoyan.com/mmall/api/mall/goods/queryDealById.json?channelId=4&version_name=&uuid=BCAB56A0848E11EBADB85BD92CD5F4F819F6CE90AED24F46A32650943282C66C&dealId='+options.id,
       method: "GET",
@@ -33,8 +38,32 @@ Page({
         console.log(err);
       },
     })
+    wx.getSystemInfo({
+      success: function (res) {
+        //屏幕的宽度/屏幕的高度 = 微信固定宽度(750)/微信高度
+        that.setData({
+          winHeight: res.windowHeight-(res.windowWidth*90/750)+'px' //90为导航的高度80+10(margin-bottom)
+        })
+      }
+    })
   },
-
+  changeImg(e){
+    var that = this
+    that.activeIndex = e.detail.current
+    this.setData({
+      activeIndex:e.detail.current
+    })
+  },
+  change(e){
+    this.setData({
+      num: e.currentTarget.dataset.index
+    })
+  },
+  toViewClick: function (e) {
+    this.setData({
+      toView: e.target.dataset.hash  
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
