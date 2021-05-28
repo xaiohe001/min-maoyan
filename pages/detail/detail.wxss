@@ -105,3 +105,62 @@
     color: #333;
     border-bottom: 2rpx solid #E6E6E6;
   }
+  .productDetails-price{
+    border-bottom: 2rpx solid #E6E6E6;
+    font-size: 26rpx;
+    color: #90969e;
+  }
+  .productDetails-price text{
+    display: inline-block;
+    padding: 24rpx 0;
+  }
+  .productDetails-price text:nth-of-type(1){
+    width: 411.6rpx;
+  }
+  .productDetails-price text:nth-of-type(2){
+    width: 141.9rpx;
+    height: 28rpx;
+    line-height: 28rpx;
+    padding: 0;
+    border: 1px dashed #E6E6E6;
+    border-top-style: none;
+    border-bottom-style: none;
+    text-align: center;
+  }
+  .productDetails-price text:nth-of-type(3){
+    width: 137.18rpx;
+    text-align: center;
+  }
+  .brand{
+    font-size: 26rpx;
+  }
+  .brand view{
+    padding-top: 20rpx;
+  }
+  .brand view text{
+    color: #90969E;
+  }
+  .images{
+    width: 100%;
+    margin-top: 20rpx;
+    padding-bottom: 14rpx;
+    border-bottom: 2rpx solid #E6E6E6;
+  }
+  .images image{
+    width: 100%;
+  }
+  .purchaseNotes{
+    padding: 30rpx;
+  }
+  .purchaseNotes-all{
+    padding-bottom: 40rpx;
+  }
+  .purchaseNotes-title{
+    font-size: 26rpx;
+    color: #333333;
+    padding-bottom: 20rpx;
+  }
+  .purchaseNotes-content{
+    font-size: 26rpx;
+    color: #90969e;
+  }

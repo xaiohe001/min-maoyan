@@ -8,8 +8,6 @@ Page({
     title:null,
     msg:[],
     activeIndex:0,
-    num:0,
-    productDetails:['商品详情','购买须知','相关推荐'],
     winHeight: '100%',
     toView: 'productBox',//锚点跳转的ID
   },
@@ -42,7 +40,7 @@ Page({
       success: function (res) {
         //屏幕的宽度/屏幕的高度 = 微信固定宽度(750)/微信高度
         that.setData({
-          winHeight: res.windowHeight-(res.windowWidth*90/750)+'px' //90为导航的高度80+10(margin-bottom)
+          winHeight: res.windowHeight-(res.windowWidth*100/750)+'px'
         })
       }
     })
@@ -60,8 +58,9 @@ Page({
     })
   },
   toViewClick: function (e) {
+    // console.log(e);
     this.setData({
-      toView: e.target.dataset.hash  
+      toView: e.target.dataset.hash
     })
   },
   /**

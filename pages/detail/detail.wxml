@@ -32,8 +32,8 @@
     <view bindtap="toViewClick" data-hash="commentBox" class="title {{toView=='commentBox' ? 'checked':''}}">购买须知</view>
     <view bindtap="toViewClick" data-hash="infoBox" class="title {{toView=='infoBox' ? 'checked':''}}">相关推荐</view>
   </view>
-
   <scroll-view style="height:{{winHeight}}" scroll-into-view="{{toView}}" scroll-y="true">
+    <!-- 商品详情 -->
       <view id="productBox">
         <view class="productDetails">
           <view class="packageDetails">套餐详情</view>
@@ -46,8 +46,24 @@
             <view>品牌 : <text>幸运石</text></view>
             <view>产地 : <text>广东汕头</text></view>
           </view>
+          <view class="images">
+            <block wx:for="{{msg.detailImages}}" wx:key="index">
+            <image src="{{item}}" mode="widthFix"></image>
+            </block>
+          </view>
         </view>
       </view>
-      <view id="commentBox">商品评价</view>
-      <view id="infoBox">商品详情</view>
+      <!-- 购买须知 -->
+      <view id="commentBox">
+        <view class="purchaseNotes">
+          <block wx:for="{{msg.terms}}" wx:key="index">
+            <view class="purchaseNotes-all">
+              <view class="purchaseNotes-title">{{item.title}}</view>
+              <text class="purchaseNotes-content">{{item.content}}</text>
+            </view>
+          </block>
+        </view>
+      </view>
+      <!-- 相关推荐 -->
+      <view id="infoBox"></view>
   </scroll-view>
