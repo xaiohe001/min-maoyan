@@ -65,5 +65,35 @@
         </view>
       </view>
       <!-- 相关推荐 -->
-      <view id="infoBox"></view>
+      <view id="infoBox">
+        <view class="relatedRecommendations">
+          <view class="relatedRecommendations-title">
+            相关推荐
+          </view>
+          <view class="limited-top">
+            <navigator wx:for="{{list}}" wx:key="index" open-type="navigate" url="{{'../detail/detail?id='+item.dealid}}">
+              <view class="bluetooth">
+                <image src="{{item.pic}}"></image>
+                <view class="txt">{{item.title}}</view>
+                <view class="prices">
+                  ¥{{item.price}}<text>¥{{item.value}}</text>
+                </view>
+              </view>
+            </navigator>
+          </view>
+          <view class="footer">
+            <navigator open-type='switchTab' url="{{'../handle/handle'}}">
+              <view class="more">
+                更多
+                <image src="../../img/rightjian.svg"></image>
+              </view>
+            </navigator>
+            
+            <view class="batch">
+              换一批
+              <image src="../../img/refresh.svg"></image>
+            </view>
+          </view>
+        </view>
+      </view>
   </scroll-view>

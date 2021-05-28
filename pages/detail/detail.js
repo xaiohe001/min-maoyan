@@ -10,6 +10,8 @@ Page({
     activeIndex:0,
     winHeight: '100%',
     toView: 'productBox',//锚点跳转的ID
+    list:[],
+    a:0
   },
 
   /**
@@ -42,6 +44,24 @@ Page({
         that.setData({
           winHeight: res.windowHeight-(res.windowWidth*100/750)+'px'
         })
+      }
+    })
+    this.getLimitedTime()
+  },
+  getLimitedTime(){
+    var that = this
+    wx.request({
+      url: `https://store.maoyan.com/mmall/api/mall/mallpro/v3/deal/interrelated.json?dealId=100413847&offset=${that.data.a}&limit=6`,
+      method:"GET",
+      success:function(res){
+        console.log(res.data.data);
+        that.setData({
+          list:[...res.data.data]
+        })
+      },
+      fail:function (err) {
+        console.log(err);
+        
       }
     })
   },
