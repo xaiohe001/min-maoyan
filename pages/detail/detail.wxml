@@ -89,7 +89,7 @@
               </view>
             </navigator>
             
-            <view class="batch">
+            <view class="batch" bindtap="obtain">
               换一批
               <image src="../../img/refresh.svg"></image>
             </view>
