@@ -92,7 +92,7 @@ Page({
       url: 'https://store.maoyan.com/mmall/api/mall/mallpro/v3/seckilling/list.json',
       method:"GET",
       success:function(res){
-        console.log(res.data.data.dealList);
+        // console.log(res.data.data.dealList);
         that.setData({
           list:[...res.data.data.dealList]
         })

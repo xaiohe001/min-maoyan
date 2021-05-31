@@ -28,7 +28,7 @@ Page({
       url: 'https://store.maoyan.com/mmall/api/mall/goods/queryDealById.json?channelId=4&version_name=&uuid=BCAB56A0848E11EBADB85BD92CD5F4F819F6CE90AED24F46A32650943282C66C&dealId='+options.id,
       method: "GET",
       success: (res) => {
-        console.log(res.data.data.derivativeDetail);
+        // console.log(res.data.data.derivativeDetail);
         that.setData({
           title:res.data.data.derivativeDetail.title,
           msg:res.data.data.derivativeDetail
@@ -54,7 +54,8 @@ Page({
       url: `https://store.maoyan.com/mmall/api/mall/mallpro/v3/deal/interrelated.json?dealId=100413847&offset=${that.data.a}&limit=6`,
       method:"GET",
       success:function(res){
-        console.log(res.data.data);
+        // console.log(that.data.a);
+        // console.log(res.data.data);
         that.setData({
           list:[...res.data.data]
         })
@@ -64,6 +65,11 @@ Page({
         
       }
     })
+  },
+  obtain(){
+    // console.log(Number(this.data.a+=6));
+    this.data.a=this.data.a+=6
+    this.getLimitedTime()
   },
   changeImg(e){
     var that = this
@@ -77,8 +83,7 @@ Page({
       num: e.currentTarget.dataset.index
     })
   },
-  toViewClick: function (e) {
-    // console.log(e);
+  toViewClick(e) {
     this.setData({
       toView: e.target.dataset.hash
     })

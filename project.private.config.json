@@ -38,12 +38,6 @@
         },
         {
           "name": "pages/index/index",
-          "pathName": "pages/componets/a",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/index/index",
           "pathName": "pages/index/index",
           "query": "",
           "scene": null
