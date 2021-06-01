@@ -59,6 +59,12 @@
           "pathName": "pages/scroll/scroll",
           "query": "id=100413269",
           "scene": null
+        },
+        {
+          "name": "pages/message/message",
+          "pathName": "pages/message/message",
+          "query": "",
+          "scene": null
         }
       ]
     }

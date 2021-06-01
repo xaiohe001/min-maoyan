@@ -1,3 +1,7 @@
+wx.cloud.init({
+  env: 'cloud1-6g0xv0i129fabc4d'
+})
+const db = wx.cloud.database()
 // pages/detail/detail.js
 Page({
   /**
@@ -9,17 +13,26 @@ Page({
     inputValue:'',
     countdown:'',
     endDates: "2021-12-11 11:11",
-    list:[]
+    list:[],
+    arr:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this
     // console.log(this);
     this.getData()
     this.getTimes()
     this.getLimitedTime()
+    db.collection('maoyan-dealList').get()
+    .then(res => {
+      // console.log(res.data);
+      that.setData({
+        arr : [...res.data]
+      })
+    }).catch(err=>{console.log(err);})
   },
 
   jump(){

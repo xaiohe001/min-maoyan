@@ -6,7 +6,8 @@
     "pages/main/main",
     "pages/handle/handle",
     "pages/tab/tab",
-    "pages/discuss/discuss"
+    "pages/discuss/discuss",
+    "pages/message/message"
   ],
   "window": {
     "backgroundTextStyle": "dark",

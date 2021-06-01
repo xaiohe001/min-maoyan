@@ -55,12 +55,12 @@
           <text>更多 > </text>
       </view>
       <view class="limited-top">
-        <navigator wx:for="{{list}}" wx:key="index" open-type="navigate" url="{{'../detail/detail?id='+item.dealId}}">
+        <navigator wx:for="{{arr}}" wx:key="index" open-type="navigate" url="{{'../detail/detail?id='+item.dealId}}">
           <view class="bluetooth">
             <image src="{{item.dealPhoto}}"></image>
             <view class="txt">{{item.dealName}}</view>
             <view class="price">
-              ¥{{item.seckillingPrice}}<text> ¥{{item.price}}</text>
+              ¥{{item.dealPrice}}
             </view>
           </view>
         </navigator>

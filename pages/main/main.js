@@ -11,8 +11,8 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     menuitems: [
-      { text: '完善信息', url: '../tab/tab', icon: '../../img/massage.svg', tips: '' },
-      { text: '个性设置', url: '../tab/tab', icon: '../../img/personality.svg', tips: '' }
+      { text: '完善信息', url: '../message/message', icon: '../../img/massage.svg', tips: '' },
+      { text: '个性设置', url: '../message/message', icon: '../../img/personality.svg', tips: '' }
     ]
   },
 

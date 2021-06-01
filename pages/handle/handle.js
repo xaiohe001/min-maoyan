@@ -32,7 +32,7 @@ Page({
       url: 'https://store.maoyan.com/mmall/api/mall/mallpro/v3/query.json?_v_=yes&theme=all&category=all&sort=timeDesc&offset='+a,
       method:"GET",
       success:function(res){
-        console.log(res.data.data);
+        // console.log(res.data.data);
         that.setData({
           lists:[...that.data.lists,...res.data.data]
         })

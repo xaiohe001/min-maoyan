@@ -1,0 +1,7 @@
+<view class="information">
+<image src="../../img/nature.jpg"></image>
+  <view class="information-title">
+    <text>CSDN地址: https://blog.csdn.net/Z_qing_he </text>
+    <text>gitHub地址: https://github.com/xaiohe001</text>
+  </view>
+</view>
