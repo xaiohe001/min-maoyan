@@ -23,12 +23,16 @@
     </view>
     <!-- 图片 -->
     <view class="picture">
+      <navigator open-type='switchTab' url="{{'../handle/handle'}}">
       <image src="//p1.meituan.net/moviemachine/e8f101992d6ffa7e3dc29ec4392052bf40813.jpg@60q"></image>
+      </navigator>
       <view> 
+        <navigator open-type='switchTab' url="{{'../handle/handle'}}">
         <image src="//p0.meituan.net/moviemachine/a8fa9c032b545f24e2053c33c2e9c86c56411.png@60q">
-      </image>
+        </image>
       <view class="classic">经典漫威</view>
       <view class="hotattack">火爆来袭</view>
+      </navigator>
       </view>
     </view>
     <!-- 限时秒杀 -->
@@ -52,7 +56,9 @@
     <view class="unicorn">
       <view class="unicorn-top">
           <text>独角兽盲盒</text>
-          <text>更多 > </text>
+          <navigator open-type='switchTab' url="{{'../handle/handle'}}">
+            <text class="unicorn-more">更多 > </text>
+          </navigator>
       </view>
       <view class="limited-top">
         <navigator wx:for="{{arr}}" wx:key="index" open-type="navigate" url="{{'../detail/detail?id='+item.dealId}}">

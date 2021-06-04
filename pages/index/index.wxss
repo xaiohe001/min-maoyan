@@ -152,7 +152,7 @@
   font-size: 30rpx;
   color: #333;
 }
-.unicorn-top>text:nth-of-type(2){
+.unicorn-more{
   font-size: 24rpx;
   color: #aaaaaa;
 }

@@ -39,6 +39,7 @@ Page({
     }
   },
   getUserInfo: function (e) {
+    // console.log(e);
     this.setUserInfo(e.detail.userInfo);
   },
 

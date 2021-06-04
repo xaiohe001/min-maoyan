@@ -27,14 +27,17 @@
   <!-- 阴影 -->
   <view class="shadow"></view>
   <!-- 商品详情 -->
+  <van-sticky>
   <view class="navigateBox">
     <view bindtap="toViewClick" data-hash="productBox" class="title {{toView=='productBox' ? 'checked':''}}">商品详情</view>
     <view bindtap="toViewClick" data-hash="commentBox" class="title {{toView=='commentBox' ? 'checked':''}}">购买须知</view>
     <view bindtap="toViewClick" data-hash="infoBox" class="title {{toView=='infoBox' ? 'checked':''}}">相关推荐</view>
   </view>
-  <scroll-view style="height:{{winHeight}}" scroll-into-view="{{toView}}" scroll-y="true">
+  </van-sticky>
+  
+  <scroll-view scroll-into-view="{{toView}}" scroll-y="true" scroll-with-animation="true" bindscroll="onPageScroll">
     <!-- 商品详情 -->
-      <view id="productBox">
+      <view id="productBox" class="position">
         <view class="productDetails">
           <view class="packageDetails">套餐详情</view>
           <view class="productDetails-price">
@@ -54,7 +57,7 @@
         </view>
       </view>
       <!-- 购买须知 -->
-      <view id="commentBox">
+      <view id="commentBox" class="position">
         <view class="purchaseNotes">
           <block wx:for="{{msg.terms}}" wx:key="index">
             <view class="purchaseNotes-all">
@@ -65,7 +68,7 @@
         </view>
       </view>
       <!-- 相关推荐 -->
-      <view id="infoBox">
+      <view id="infoBox" class="position">
         <view class="relatedRecommendations">
           <view class="relatedRecommendations-title">
             相关推荐

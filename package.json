@@ -1,0 +1,22 @@
+{
+  "name": "min-maoyan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xaiohe001/min-maoyan.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xaiohe001/min-maoyan/issues"
+  },
+  "homepage": "https://github.com/xaiohe001/min-maoyan#readme",
+  "dependencies": {
+    "@vant/weapp": "^1.6.8"
+  }
+}

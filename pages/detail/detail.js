@@ -8,10 +8,15 @@ Page({
     title:null,
     msg:[],
     activeIndex:0,
+
     winHeight: '100%',
-    toView: 'productBox',//锚点跳转的ID
+    toView: 'productBox',
+    nowstatus:'productBox',
     list:[],
-    a:0
+    a:0,
+    productBoxTop:0,//505
+    commentBoxTop:0,//5151
+    infoBoxTop: 0//5642
   },
 
   /**
@@ -33,19 +38,20 @@ Page({
           title:res.data.data.derivativeDetail.title,
           msg:res.data.data.derivativeDetail
         })
+        this.getImg(this.data.msg.detailImages)
       },
       fail: (err) => {
         console.log(err);
       },
     })
-    wx.getSystemInfo({
-      success: function (res) {
-        //屏幕的宽度/屏幕的高度 = 微信固定宽度(750)/微信高度
-        that.setData({
-          winHeight: res.windowHeight-(res.windowWidth*100/750)+'px'
-        })
-      }
-    })
+    // wx.getSystemInfo({
+    //   success: function (res) {
+    //     //屏幕的宽度/屏幕的高度 = 微信固定宽度(750)/微信高度
+    //     that.setData({
+    //       winHeight: res.windowHeight-(res.windowWidth*90/750)+'px'
+    //     })
+    //   }
+    // })
     this.getLimitedTime()
   },
   getLimitedTime(){
@@ -78,15 +84,64 @@ Page({
       activeIndex:e.detail.current
     })
   },
-  change(e){
+  toViewClick(e) {
+    // console.log(e.currentTarget.dataset.hash);
+    switch (e.currentTarget.dataset.hash){
+      case 'commentBox':
+        wx.pageScrollTo({scrollTop: this.data.commentBoxTop,})
+        break;
+      case 'infoBox':
+        wx.pageScrollTo({scrollTop: this.data.infoBoxTop,})
+        break;
+      case 'productBox':
+        wx.pageScrollTo({scrollTop: this.data.productBoxTop,})
+        break;
+      default:
+        console.log('没有符合条件的');
+    }
     this.setData({
-      num: e.currentTarget.dataset.index
+      toView:e.currentTarget.dataset.hash
     })
   },
-  toViewClick(e) {
-    this.setData({
-      toView: e.target.dataset.hash
+
+  getImg(imgArr) {
+    this.imageReady(imgArr).then(() => {
+      //do something
+      const query = wx.createSelectorQuery()
+      query.selectAll('.position').boundingClientRect(res=>{
+        let arr = []
+        res.forEach(res=>{
+          console.log(res.top);
+          arr.push(res.top - 50)
+        })
+        this.setData({
+          productBoxTop:arr[0] ,//505
+          commentBoxTop:arr[1],//5151
+          infoBoxTop: arr[2]//5642
+        })
+        // console.log(this.data.productBoxTop, this.data.commentBoxTop, this.data.infoBoxTop);
+      }).exec()
     })
+  },
+  imageReady(pics) {
+      const picsAll = pics.map(imgurl => new Promise((resolve, reject) => {
+        // 小程序判断多张图片是否加载完成方法
+          wx.getImageInfo({
+              src: imgurl,
+              success: function() {
+                  resolve(imgurl);
+              },
+              fail: function() {
+                reject(new Error('image load error'));
+              }
+          });
+          // H5 判断图片是否加载完成方法
+          // const img = new Image();
+          // img.src = imgurl;
+          // img.onload = () => resolve(imgurl);
+          // img.onerror = () => reject(new Error('image load error'));
+      }));
+      return Promise.all(picsAll).then(()=>{})
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -120,7 +175,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    
   },
 
   /**

@@ -65,6 +65,12 @@
           "pathName": "pages/message/message",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/ceshi/ceshi",
+          "pathName": "pages/ceshi/ceshi",
+          "query": "",
+          "scene": null
         }
       ]
     }
