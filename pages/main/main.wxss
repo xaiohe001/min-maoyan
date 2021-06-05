@@ -1,3 +1,12 @@
+.container{
+  padding: 0;
+}
+.btn{
+  width: 100%;
+  padding: 0;
+}
+
+
 .head-height {
   height: 240rpx;
 }
@@ -14,13 +23,21 @@
   width: 100%;
   position: fixed;
 }
-
+.userinfos{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  background: linear-gradient(135deg, rgb(242, 238, 255) 0%, rgb(255, 255, 255) 100%);
+}
 .userinfo {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
   position: fixed;
+  background: linear-gradient(135deg, rgb(242, 238, 255) 0%, rgb(255, 255, 255) 100%);
 }
 
 .userinfo-avatar {
@@ -36,6 +53,7 @@
 }
 .list-wrapper {
   width: 100%;
+  margin-top: 200rpx;
 }
 
 /* 横着的分割View样式 */

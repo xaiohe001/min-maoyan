@@ -75,16 +75,17 @@
   padding: 0;
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: left; 
   border-top-right-radius: 20rpx;
   border-top-left-radius: 20rpx;
 }
-.container>text{
-  padding-left: 20rpx;
+.container text{
+  padding: 0 20rpx;
   font-size: 30rpx;
 }
 .container>text:nth-child(2){
   color: violet;
+  padding-right: 200rpx;
 }
 .limited{
   margin: 0 30rpx 30rpx 30rpx;

@@ -8,7 +8,6 @@ Page({
     title:null,
     msg:[],
     activeIndex:0,
-
     winHeight: '100%',
     toView: 'productBox',
     nowstatus:'productBox',
@@ -44,14 +43,6 @@ Page({
         console.log(err);
       },
     })
-    // wx.getSystemInfo({
-    //   success: function (res) {
-    //     //屏幕的宽度/屏幕的高度 = 微信固定宽度(750)/微信高度
-    //     that.setData({
-    //       winHeight: res.windowHeight-(res.windowWidth*90/750)+'px'
-    //     })
-    //   }
-    // })
     this.getLimitedTime()
   },
   getLimitedTime(){
@@ -85,6 +76,9 @@ Page({
     })
   },
   toViewClick(e) {
+    this.setData({
+      toView:e.currentTarget.dataset.hash
+    })
     // console.log(e.currentTarget.dataset.hash);
     switch (e.currentTarget.dataset.hash){
       case 'commentBox':
@@ -99,9 +93,6 @@ Page({
       default:
         console.log('没有符合条件的');
     }
-    this.setData({
-      toView:e.currentTarget.dataset.hash
-    })
   },
 
   getImg(imgArr) {

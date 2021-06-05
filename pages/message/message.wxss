@@ -12,7 +12,7 @@
   position: absolute;
   top: 0;
   padding: 30rpx;
-  color: rgb(36, 2, 128);
+  color: #fff;
   font-size: 40rpx;
 }
 .information-title text{

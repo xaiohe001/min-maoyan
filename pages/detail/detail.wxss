@@ -74,6 +74,7 @@
   display: flex;
   border-bottom: 4rpx solid #F7F7F8;
   background-color: #fff;
+  z-index: 99;
 }
   .title{
     flex: 1;
