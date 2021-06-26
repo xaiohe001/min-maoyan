@@ -22,6 +22,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    
+// wx.downloadFile({
+// 	url: shareInfo.userphoto.replace('http://p0.meituan.net', 'https://wx.meituan.net'),
+// 	success: (res)=>{
+// 		var avatarUrl = res.tempFilePath
+// 	}
+// })
+
     // console.log(options.id);
     // this.setData({
     //   title:options.id
@@ -118,10 +126,12 @@ Page({
   imageReady(pics) {
       const picsAll = pics.map(imgurl => new Promise((resolve, reject) => {
         // 小程序判断多张图片是否加载完成方法
+        const url = imgurl.replace(/^http:/g, 'https:')
+        // console.log(url);
           wx.getImageInfo({
-              src: imgurl,
+              src: url,
               success: function() {
-                  resolve(imgurl);
+                  resolve(url);
               },
               fail: function() {
                 reject(new Error('image load error'));
