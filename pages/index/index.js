@@ -101,20 +101,27 @@ Page({
   },
   getLimitedTime(){
     var that = this
-    wx.request({
-      url: 'https://store.maoyan.com/mmall/api/mall/mallpro/v3/seckilling/list.json',
-      method:"GET",
-      success:function(res){
-        // console.log(res.data.data.dealList);
-        that.setData({
-          list:[...res.data.data.dealList]
-        })
-      },
-      fail:function (err) {
-        console.log(err);
+    // wx.request({
+    //   url: 'https://store.maoyan.com/mmall/api/mall/mallpro/v3/seckilling/list.json',
+    //   method:"GET",
+    //   success:function(res){
+    //     console.log(res.data);
+    //     that.setData({
+    //       list:[...res.data.data.dealList]
+    //     })
+    //   },
+    //   fail:function (err) {
+    //     console.log(err);
         
-      }
-    })
+    //   }
+    // })
+    db.collection('xiaohe1').get()
+    .then(res => {
+      // console.log(res.data);
+      that.setData({
+        list : [...res.data]
+      })
+    }).catch(err=>{console.log(err);})
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

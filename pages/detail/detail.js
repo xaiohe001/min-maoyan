@@ -38,6 +38,7 @@ Page({
           msg:res.data.data.derivativeDetail
         })
         this.getImg(this.data.msg.detailImages)
+        // console.log(this.data.msg.detailImages);
       },
       fail: (err) => {
         console.log(err);
@@ -79,7 +80,7 @@ Page({
     this.setData({
       toView:e.currentTarget.dataset.hash
     })
-    // console.log(e.currentTarget.dataset.hash);
+    console.log(e.currentTarget.dataset.hash);
     switch (e.currentTarget.dataset.hash){
       case 'commentBox':
         wx.pageScrollTo({scrollTop: this.data.commentBoxTop,})
